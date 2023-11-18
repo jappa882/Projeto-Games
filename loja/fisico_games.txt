@@ -1,0 +1,38 @@
+/* FÍSICO GAMES */
+
+CREATE TABLE games (
+    Codgames        integer     NOT NULL,
+    quantidade      integer     NOT NULL,
+    preco           numeric(10,2)  Not NULL,
+    Descricao       varchar (30),
+    PRIMARY KEY (Codgames)
+);
+
+CREATE TABLE cliente (
+    codigoCliente             integer       NOT NULL,
+    informacoespessoais    varchar (50)      NOT NULL,
+    Cpf                    integer       NOT NULL,
+    nome                   varchar (30)       NOT NULL,
+   PRIMARY KEY (CodigoCliente)
+    
+);
+
+CREATE TABLE pedido (
+    codigoPedido          integer (50) NOT NULL,
+    codigoCliente          integer       NOT NULL,
+    data                 date            NOT NULL,
+        PRIMARY KEY (CodigoPedido),
+        FOREIGN KEY (codigoCliente) REFERENCES cliente (codigoCliente)
+
+);
+
+CREATE TABLE itenspedido (
+   codigoPedido          integer  NOT NULL,
+   Codgames        integer     NOT NULL,
+    preco              numeric(10,2)      NOT NULL,
+    quantidade         numeric(10,2)      NOT NULL,
+    PRIMARY KEY (codigoPedido, Codgames), 
+    
+    FOREIGN KEY(codigoPedido) REFERENCES pedido (codigoPedido),
+    FOREIGN KEY(Codgames) REFERENCES games (Codgames)
+);
