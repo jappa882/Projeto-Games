@@ -1,5 +1,5 @@
 # Projeto-Games
-Projeto usando Desenvolvimento Web e banco de dados.
+Projeto usando Desenvolvimento Web com php e Web e banco de dados.
 
 Para rodar o projeto:
 * Deve ativar o xampp, local(Apache) e local(MySQL)
