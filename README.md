@@ -8,6 +8,6 @@ Para rodar o projeto:
 
 Para acessar as rotas:
 * Deve entrar via/adm para cadastrar o game
-* Deve entrar via/pub para cadastrar o cliente e ver ou modificar o itens do pedido.
+* Deve entrar via/pub para cadastrar o cliente consultar os itens do pedido e modificar.
 
 
